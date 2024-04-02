@@ -1,0 +1,19 @@
+List all servers, one per line (CR/LF after each line)
+
+http://web.golde.org/ServerManager/Main/ListServers?user=ericgolde555&pw=ostrich555
+
+List all files on a server, one per line (CR/LF after each line), path starting at the server directory.
+
+http://web.golde.org/ServerManager/Main/ListFiles?user=ericgolde555&pw=ostrich555&server=CrossyRoad
+
+Download file, file name as returned in ListFiles call.
+
+http://web.golde.org/ServerManager/Main/DownloadFile?user=ericgolde555&pw=ostrich555&server=CrossyRoad&filename=foo.txt
+
+Upload file. Uses POST instead of GET.
+
+http://web.golde.org/ServerManager/Main/UploadFile?user=ericgolde555&pw=ostrich555&server=CrossyRoad&filename=foo.txt
+
+Delete file. file name as returned in ListFiles call
+
+http://web.golde.org/ServerManager/Main/DeleteFile?user=ericgolde555&pw=ostrich555&server=CrossyRoad&filename=foo.txt

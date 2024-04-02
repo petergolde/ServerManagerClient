@@ -36,7 +36,8 @@ namespace ServerManager
         public void PopulateTreeViewWithFileList(TreeView tv)
         {
             try {
-                string[] files = web.DownloadString(GetUrl("ListFiles")).Split(new char[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
+                string url = GetUrl("ListFiles");
+                string[] files = web.DownloadString(url).Split(new char[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
                 tv.Nodes.Clear();
                 tv.BeginUpdate();
                 foreach (string f in files) {
